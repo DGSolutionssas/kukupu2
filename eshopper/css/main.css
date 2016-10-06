@@ -120,20 +120,45 @@ a#scrollUp i{
   background: #0083C9;
 }
 
+.fa-facebook {
+  background: #0083C9;
+  color: #FFFFFF;
+}
+
 .fa-twitter:hover  {
 	background:#5BBCEC;
+}
+
+.fa-twitter  {
+  background:#5BBCEC;
+  color: #FFFFFF;
 }
 
 .fa-linkedin:hover  {
 	background:#FF4518;
 }
 
+.fa-linkedin {
+  background:#FF4518;
+  color: #FFFFFF;
+}
+
 .fa-dribbble:hover  {
 	background:#90C9DC;
 }
 
+.fa-dribbble  {
+  background:#90C9DC;
+  color: #FFFFFF;
+}
+
 .fa-google-plus:hover  {
 	background:#CE3C2D;
+}
+
+.fa-google-plus  {
+  background:#CE3C2D;
+  color: #FFFFFF;
 }
 
 .header-middle .container .row {
