@@ -4,12 +4,12 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
     require_once('./VideosDA.php');
     $db=new VideosDA();
-    
+
     switch($action) {
         case 'obtenerVideos' :
             $videos=$db->obtenerVideos();
             $arrayVideos = array();
-            for ($i = 0; $i < count($videos); $i++) 
+            for ($i = 0; $i < count($videos); $i++)
             {
                 $arrayVideos[$i]['idVideo'] = $videos[$i]['idVideo'];
                 $arrayVideos[$i]['TituloVideo']= $videos[$i]['TituloVideo'];
@@ -25,6 +25,6 @@ if(isset($_POST['action']) && !empty($_POST['action'])) {
         case 'registrarVideo':
             $videos=$db->guardarVideo($_POST['txtTituloVideo'],$_POST['txtDescripcionVideo'],$_POST['txtUrl']);
         break;
-       
+
     }
 }

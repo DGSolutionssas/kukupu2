@@ -75,12 +75,10 @@
                                     <ul class="nav side-menu" id="listaCampanas">
                                         <li><a href="Inicio.php"><i class="fa fa-home"></i>Inicio <span class="fa fa-chevron-right"></span></a></li>
                                         <li><a href="Videos.php"><i class="fa fa-camera"></i>Videos<span class="fa fa-chevron-right"></span></a></li>
-                                        <li><a href="Devocionales.php"><i class="fa fa-th-list"></i>Devocionales<span class="fa fa-chevron-right"></span></a></li>
-                                        <li><a href="Eventos.php"><i class="fa fa-calendar"></i>Proximos Eventos<span class="fa fa-chevron-right"></span></a></li>
-                                        <li><a href="Audios.php"><i class="fa fa-caret-square-o-right"></i>Audios<span class="fa fa-chevron-right"></span></a>
+                                        <li><a href="Galerias.php"><i class="fa fa-image"></i>Galerias<span class="fa fa-chevron-right"></span></a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>  
                             <!-- /sidebar menu -->
                             <!-- /menu footer buttons -->
                             <!-- /menu footer buttons -->

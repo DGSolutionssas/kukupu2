@@ -14,7 +14,7 @@ class VideosDA {
 
 	public function obtenerVideos()
 	{
-        $resul=mysqli_query($this->db->Connect(),"SELECT idVideo,TituloVideo,DescripcionVideo,Url FROM appvideos");
+        $resul=mysqli_query($this->db->Connect(),"SELECT idVideo,TituloVideo,DescripcionVideo,Url FROM Videos");
         mysqli_set_charset($this->db->connect(), "utf8");
         $jsonData = array();
         $nrows = mysqli_num_rows($resul);
@@ -30,11 +30,11 @@ class VideosDA {
 
     public function eliminarVideo($idVideo)
     {
-        $resul=mysqli_query($this->db->Connect(),"DELETE FROM appvideos WHERE idVideo=".$idVideo);
+        $resul=mysqli_query($this->db->Connect(),"DELETE FROM Videos WHERE idVideo=".$idVideo);
     }
 
     public function guardarVideo($txtTituloVideo, $txtDescripcionVideo, $txtUrl)
     {
-        $resul=mysqli_query($this->db->Connect(),"INSERT INTO appvideos (TituloVideo, DescripcionVideo, Url) VALUES ('" . $txtTituloVideo . "','" . $txtDescripcionVideo . "','" . $txtUrl . "')");
+        $resul=mysqli_query($this->db->Connect(),"INSERT INTO Videos (TituloVideo, DescripcionVideo, Url) VALUES ('" . $txtTituloVideo . "','" . $txtDescripcionVideo . "','" . $txtUrl . "')");
     }
 }
