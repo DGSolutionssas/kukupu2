@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 include("Header.php");
 ?>
 <div>
@@ -6,5 +7,3 @@ include("Header.php");
 <?php
 include("Footer.php");
 ?>
-
-
