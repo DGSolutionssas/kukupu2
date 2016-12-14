@@ -1,6 +1,6 @@
 <?php
     $return = Array("ok"=>TRUE);
-    $upload_folder ="uploads";
+    $upload_folder ="http://127.0.0.1:8082/eshopper/images";
     $nombre_archivo = $_FILES["archivo"]["name"];
     $tipo_archivo = $_FILES["archivo"]["type"];
     $tamano_archivo = $_FILES["archivo"]["size"];

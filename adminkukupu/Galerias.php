@@ -16,6 +16,7 @@ if(!empty($_SESSION['autenticado']) && $_SESSION['autenticado'] == true)
                     <th>IDGALERIA</th>
                     <th>TITULO</th>
                     <th>URL</th>
+                    <th>ACTIVO</th>
                     <th></th>
                  </tr>
             </thead>
@@ -40,6 +41,10 @@ if(!empty($_SESSION['autenticado']) && $_SESSION['autenticado'] == true)
                     <div class="form-row">
                         <label class='control-label'>Titulo Galeria:</label>
                         <input autocomplete="off" type="text" id="txtTituloGaleria" name="txtTituloGaleria" data-parsley-required data-parsley-required-message="Dato Requerido." data-parsley-group="block1" class="form-control">
+                    </div>
+                    <div class="form-row ">
+                        <label class='control-label'>Imagen Activa:</label>
+                        <input autocomplete="off" type="checkbox" id="chkActivo" name="chkActivo" data-parsley-group="block1" class="form-control">
                     </div>
                     <div class="form-row">
                       <label class='control-label'>Imagen:</label>

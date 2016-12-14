@@ -26,12 +26,12 @@ function cargarVideos() {
             type: "GET",
             dataType: 'jsonp',
             crossDomain: true,
-            url: "http://127.0.0.1/webservices/WSVideos.php",
+            url: "http://127.0.0.1:8082/webservices/WSVideos.php",
         })
         .done(function(data, textStatus, jqXHR) {
           var textoHTML="";
             for (i = 0; i < data.videos.length; i++) {
-                var texto = "<div class=\"col-sm-4\"><h2 class=\"title\">"+data.videos[i].video.TituloVideo+"</h2><div class=\"embed-responsive embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" src=\"https://www.youtube.com/embed/GOf83WM__LY\"></iframe></div></div>";
+                var texto = "<div class=\"col-sm-4\"><h2 class=\"title\">"+data.videos[i].video.TituloVideo+"</h2><div class=\"embed-responsive embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" src=\'"+data.videos[i].video.Url+"' allowfullscreen></iframe></div></div>";
                 console.log(data.videos[i].video.idVideo);
                 console.log(data.videos[i].video.TituloVideo);
                 console.log(data.videos[i].video.DescripcionVideo);

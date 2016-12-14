@@ -14,7 +14,7 @@ class GaleriasDA {
 
 	public function obtenerGalerias()
 	{
-        $resul=mysqli_query($this->db->Connect(),"SELECT idGaleria,TituloGaleria,Url FROM galerias");
+        $resul=mysqli_query($this->db->Connect(),"SELECT idGaleria,TituloGaleria,Url,activo FROM galerias");
         mysqli_set_charset($this->db->connect(), "utf8");
         $jsonData = array();
         $nrows = mysqli_num_rows($resul);
@@ -33,9 +33,10 @@ class GaleriasDA {
         $resul=mysqli_query($this->db->Connect(),"DELETE FROM Galerias WHERE idGaleria=".$idGaleria);
     }
 
-    public function guardarGaleria($txtTituloGaleria, $txtUrl)
+    public function guardarGaleria($txtTituloGaleria, $txtUrl, $activo)
     {
       echo $txtUrl;
-      $resul=mysqli_query($this->db->Connect(),"INSERT INTO Galerias (TituloGaleria, Url) VALUES ('" . $txtTituloGaleria . "','"  . $txtUrl . "')");
+      $resul=mysqli_query($this->db->Connect(),"INSERT INTO Galerias (TituloGaleria, Url, activo) VALUES ('" . $txtTituloGaleria . "','"  . $txtUrl . 
+      "'," . $activo .")");
     }
   }

@@ -57,6 +57,19 @@ function cargarTabla() {
                         "sClass": "justify",
                         "width": "auto"
                     },
+					{
+						data:   "activo",
+						render: function ( data ) {
+								if ( data === '1' ) {
+									return '<input type="checkbox" disabled readonly class="editor-active" checked >';
+								}
+								else
+								{
+									return '<input type="checkbox" disabled readonly class="editor-active">';
+								}
+								return data;
+								},
+					},
                     {
                         data: null,
                         className: "center",
@@ -112,11 +125,15 @@ function guardarGaleria()
     {
         var txtTituloGaleria = document.getElementById("txtTituloGaleria").value;
         var txtUrl = document.getElementById("archivoImage").value;
+		var activo = document.getElementById("chkActivo").checked;
         var action='registrarGaleria';
+        var txtUrl = txtUrl.replace("C:\\fakepath\\","http://127.0.0.1:8082/eshopper/images/")
+       
 
-        jQuery.post('GaleriasBL.php', {txtTituloGaleria:txtTituloGaleria, txtUrl: txtUrl, action: action}, function (data) {
+        jQuery.post('GaleriasBL.php', {txtTituloGaleria:txtTituloGaleria, txtUrl: txtUrl, activo: activo ,action: action}, function (data) {
             if (data.error === 1)
             {
+				alert("paila");
             }
             else
             {

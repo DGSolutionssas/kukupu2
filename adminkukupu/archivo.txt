@@ -1,20 +1,12 @@
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
-Cantidad : 0
+Error : 
+Error : 
+Cantidad : 
+Cantidad : 1
 Cantidad : 0
 Cantidad : 0
 Cantidad : 1
 Cantidad : 0
-Cantidad : 0
-Cantidad : 0
+Cantidad : 1
 Cantidad : 1
 Cantidad : 1
 Cantidad : 1
