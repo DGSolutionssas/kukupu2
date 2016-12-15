@@ -5,20 +5,21 @@
 	mysql_select_db('kukupuWeb',$link) or die('Seleccione una DB Valida');
 
 //Obtener Videos de la DB
-	$query = "SELECT idVideo,TituloVideo,DescripcionVideo,Url FROM Videos";
+	$query = "SELECT B.idblog as idBlog, B.titulo_blog, B.texto_blog, B.fecha_blog, B.idUsuario_posted, B.idGaleria_posted, U.Nombre from blog B
+inner join usuario U ON B.idUsuario_posted=U.idUsuario";
 	$result = mysql_query($query,$link) or die('Errant query:  '.$query);
 
 //Recorriendo los registros
-	$videos = array();
+	$blogs = array();
 	if(mysql_num_rows($result)) {
-		while($video = mysql_fetch_assoc($result)) {
-			$videos[] = array('video'=>$video);
+		while($blog = mysql_fetch_assoc($result)) {
+			$blogs[] = array('blog'=>$blog);
 		}
 	}
 
 	//Retornando en Formato JSON
 		//header('Content-type: application/json');
-    echo $_GET['callback']."(".json_encode(array('videos'=>$videos)).");";
+    echo $_GET['callback']."(".json_encode(array('blogs'=>$blogs)).");";
 
 //Desconectando de la DB
 @mysql_close($link);
