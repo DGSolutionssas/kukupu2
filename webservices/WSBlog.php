@@ -5,7 +5,7 @@
 	mysql_select_db('kukupuWeb',$link) or die('Seleccione una DB Valida');
 
 //Obtener Videos de la DB
-	$query = "SELECT B.idblog as idBlog, B.titulo_blog, B.texto_blog, B.fecha_blog, B.idUsuario_posted, B.idGaleria_posted, U.Nombre from blog B
+	$query = "SELECT B.idblog as idBlog, B.titulo_blog, B.texto_blog, B.fecha_blog, B.idUsuario_posted, U.Nombre from blog B
 inner join usuario U ON B.idUsuario_posted=U.idUsuario";
 	$result = mysql_query($query,$link) or die('Errant query:  '.$query);
 

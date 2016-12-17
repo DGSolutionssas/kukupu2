@@ -76,6 +76,7 @@
                                         <li><a href="Inicio.php"><i class="fa fa-home"></i>Inicio <span class="fa fa-chevron-right"></span></a></li>
                                         <li><a href="Videos.php"><i class="fa fa-camera"></i>Videos<span class="fa fa-chevron-right"></span></a></li>
                                         <li><a href="Galerias.php"><i class="fa fa-image"></i>Galerias<span class="fa fa-chevron-right"></span></a></li>
+										<li><a href="Blog.php"><i class="fa fa-image"></i>Blog<span class="fa fa-chevron-right"></span></a></li>
                                     </ul>
                                 </div>
                             </div>  
